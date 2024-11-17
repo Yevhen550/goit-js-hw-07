@@ -1,5 +1,5 @@
 const list = document.querySelectorAll('.item');
-console.dir(`Number of categories: ${list.length}`);
+console.log(`Number of categories: ${list.length}`);
 
 list.forEach(el => {
   console.log(`Category: ${el.firstElementChild.textContent}
