@@ -60,3 +60,7 @@ button:hover {
 a {
   text-decoration: none;
 }
+
+.widget {
+  text-align: center;
+}
