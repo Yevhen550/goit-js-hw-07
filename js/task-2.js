@@ -25,6 +25,8 @@ const images = [
   },
 ];
 
+//?============== Version -1- ================================================================================
+
 const gallery = document.querySelector('.gallery');
 
 const createImgEl = images
@@ -35,3 +37,22 @@ const createImgEl = images
   .join('');
 
 gallery.insertAdjacentHTML('beforeend', createImgEl);
+
+//*============== Version -2- ===================================================================================
+
+// const gallery = document.querySelector('.gallery');
+
+// const createImgEl = images.map(el => {
+//   const galleryItemEl = document.createElement('li');
+//   const galleryImgEl = document.createElement('img');
+
+//   galleryItemEl.classList.add('gallery-item');
+//   galleryImgEl.classList.add('gallery-image');
+//   galleryImgEl.src = el.url;
+//   galleryImgEl.alt = el.alt;
+
+//   galleryItemEl.append(galleryImgEl);
+//   return galleryItemEl;
+// });
+
+// gallery.append(...createImgEl);
