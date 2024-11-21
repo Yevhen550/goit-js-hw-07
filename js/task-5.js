@@ -1,9 +1,6 @@
 const bodyEl = document.querySelector('body');
 const buttonEl = document.querySelector('.change-color');
 const colorEl = document.querySelector('.color');
-const blockEl = document.querySelector('.widget');
-
-blockEl.style
 
 buttonEl.addEventListener('click', () => {
   const color = getRandomHexColor();
