@@ -139,3 +139,15 @@ input {
 #controls [data-destroy]:hover {
   background-color: #ff7070;
 }
+
+#boxes {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+#boxes div {
+  margin-right: 44px;
+  border-radius: 5px;
+}
