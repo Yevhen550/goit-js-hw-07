@@ -14,9 +14,8 @@ const onFormSubmit = ev => {
       [form.elements.password.name]: password.trim(),
     };
     console.log(formDate);
+    form.reset();
   }
-
-  form.reset();
 };
 
 form.addEventListener('submit', onFormSubmit);
