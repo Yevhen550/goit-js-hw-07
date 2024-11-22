@@ -3,12 +3,13 @@ const inputEl = document.querySelector('input');
 const btnCreate = document.querySelector('button[data-create]');
 const btnDestroy = document.querySelector('button[data-destroy]');
 
-let boxSize = 30;
+let boxSize = 20;
 
 btnCreate.addEventListener('click', createBoxes);
 btnDestroy.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount) {
+  destroyBoxes();
   const sum = +(amount.value = inputEl.value);
   let newArr = [];
 
@@ -24,11 +25,11 @@ function createBoxes(amount) {
     newArr.push(newDiv);
   }
   boxEl.append(...newArr);
+  inputEl.value = '';
 }
 
 function destroyBoxes() {
   boxEl.innerHTML = '';
-  inputEl.value = '';
   boxSize = 20;
 }
 
