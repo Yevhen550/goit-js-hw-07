@@ -1,8 +1,8 @@
 const form = document.querySelector('.login-form');
 
 const onFormSubmit = ev => {
-    ev.preventDefault();
-    
+  ev.preventDefault();
+
   const email = form.elements.email.value;
   const password = form.elements.password.value;
 
