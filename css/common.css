@@ -58,6 +58,12 @@ a {
   text-decoration: none;
 }
 
+input {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 2px solid #808080;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -95,4 +101,41 @@ a {
   background-color: #f9f9f9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.login-form button {
+  border-radius: 8px;
+  width: 86px;
+}
+
+#controls input {
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+#controls button {
+  margin-left: 16px;
+  width: 120px;
+  border-radius: 8px;
+}
+
+#controls [data-destroy] {
+  background-color: #ff4e4e;
+}
+
+#controls [data-destroy]:hover {
+  background-color: #ff7070;
 }
