@@ -3,17 +3,28 @@ const inputEl = document.querySelector('input');
 const btnCreate = document.querySelector('button[data-create]');
 const btnDestroy = document.querySelector('button[data-destroy]');
 
-let boxSize = 20;
+let boxSize = 30;
 
-btnCreate.addEventListener('click', createBoxes);
+btnCreate.addEventListener('click', () => {
+  const amount = Number(inputEl.value.trim());
+
+  if (amount <= 0 || amount > 100 || isNaN(amount)) {
+    alert('Введіть число від 1 до 100');
+    inputEl.value = '';
+    return;
+  }
+
+  createBoxes(amount);
+  inputEl.value = '';
+});
+
 btnDestroy.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount) {
   destroyBoxes();
-  const sum = +(amount.value = inputEl.value);
   let newArr = [];
 
-  for (let i = 0; i < sum; i++) {
+  for (let i = 0; i < amount; i++) {
     boxSize += 10;
 
     const newDiv = document.createElement('div');
@@ -25,7 +36,6 @@ function createBoxes(amount) {
     newArr.push(newDiv);
   }
   boxEl.append(...newArr);
-  inputEl.value = '';
 }
 
 function destroyBoxes() {
